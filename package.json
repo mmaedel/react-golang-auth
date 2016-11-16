@@ -1,14 +1,13 @@
 {
   "name": "golang-react",
-  "author": "Andrew Odewahn",
+  "author": "Andrew Odewahn, forked by Stefan Wüthrich",
   "version": "0.0.1",
   "description": "",
   "main": "",
   "scripts": {
-    "frontend": "npm run watch & npm run backend & npm run serve",
+    "frontend": "npm run watch & npm run serve",
     "watch": "watchify -o dist/bundle.js src/main.js -dv",
-    "serve": "python -m SimpleHTTPServer",
-    "backend": "cd backend; gin"
+    "serve": "python -m SimpleHTTPServer"
   },
   "dependencies": {
     "immutable": "^3.7.6",

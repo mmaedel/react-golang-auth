@@ -149,7 +149,7 @@ func main() {
 	//This returns some fake data
 	r.Handle("/data", handler.Handler{env, FakeData}).Methods("GET", "OPTIONS")
 
-	port := "3001" // this is the gin port, but the app port is exposed at 3000
+	port := "3000" // this is the gin port, but the app port is exposed at 3000
 	http.ListenAndServe(":"+port, r)
 
 }

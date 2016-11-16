@@ -1,3 +1,6 @@
+> This Fork works with actual jwt-go v3.0 (https://github.com/dgrijalva/jwt-go/blob/master/MIGRATION_GUIDE.md)
+> and without gin
+
 This repo is a demonstration / sketch for a react+redux frontend with a golang API  backend that demonstrates:
 
 * Use of higher-level components to protect pages in the frontend that require authorization
@@ -24,8 +27,9 @@ If there is interest, I'll make another post / video with more detail on how thi
 First, you need a working Golang environment (1.5+)
 * Clone the repo
 * `npm install`
-* `npm run frontend`
-* `go get` to download the go packages
+* `cd backend && go get` to download the go packages
+* `go run main.go`
+* `cd .. && npm run frontend` (in other terminal)
 
 Open your browser to `localhost:8000/dist`
 
