@@ -67,9 +67,10 @@ func GetCredentials(env *handler.Env, username, password string) Creds {
 		// Create the token
 		token := jwt.New(jwt.SigningMethodHS256)
 		// Set some claims
-		token.Claims["sub"] = username
-		token.Claims["iss"] = "example.com"
-		token.Claims["exp"] = time.Now().Add(time.Hour * 72).Unix()
+		claims := token.Claims.(jwt.MapClaims)
+		claims["sub"] = username
+		claims["iss"] = "example.com"
+		claims["exp"] = time.Now().Add(time.Hour * 72).Unix()
 		var err error
 		credentials.AuthToken, err = token.SignedString([]byte(env.Secret))
 		if err != nil {

@@ -10,7 +10,7 @@ const main = React.createClass({
   render: function() {
     let data = this.props.Data.get("Data").map(x => {
       return (
-        <li>{x}</li>
+        <li key={x}>{x}</li>
       )
     })
     return (
