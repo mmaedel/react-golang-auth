@@ -12,7 +12,7 @@ export const INITIAL_STATE = fromJS({
   Data: []
 })
 
-const fetchDataURL = 'http://localhost:3000/data'
+const fetchDataURL = 'http://api.lokalna.dev:8080/data'
 
 /*********************************************************************
 ||  The reducer

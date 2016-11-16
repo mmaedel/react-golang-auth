@@ -15,7 +15,7 @@ export const INITIAL_STATE = fromJS({
   Email: ""
 })
 
-const fetchProjectMetadataURL = 'http://localhost:3000/project'
+const fetchProjectMetadataURL = 'http://api.lokalna.dev:8080/project'
 
 /*********************************************************************
 ||  The reducer
@@ -55,7 +55,7 @@ export function login(creds) {
     }
   }
   return dispatch => {
-    fetch("http://localhost:3000/login", request)
+    fetch("http://api.lokalna.dev:8080/auth/login", request)
       .then( response => response.json())
       .then( json => {
         console.log(json)
